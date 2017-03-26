@@ -3,7 +3,7 @@
 
 [![NPM](https://nodei.co/npm/cross-env.png?downloads=true)](https://www.npmjs.com/package/cross-env)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-cross-env/build/screen-capture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-cross_env_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-cross-env/build..beta..travis-ci.org/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-cross-env/build/screen-capture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-cross-env_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-cross-env/build..beta..travis-ci.org/apidoc.html)
 
 ![package-listing](https://npmdoc.github.io/node-npmdoc-cross-env/build/screen-capture.npmPackageListing.svg)
 
