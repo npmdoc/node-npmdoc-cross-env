@@ -51,7 +51,7 @@
 
         href="https://github.com/kentcdodds/cross-env#readme"
 
-    >cross-env (v3.2.4)</a>
+    >cross-env (v4.0.0)</a>
 </h1>
 <h4>Run scripts that set and use environment variables across platforms</h4>
 <div class="apidocSectionDiv"><a
@@ -61,59 +61,12 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.cross-env">module cross-env</a><ol>
 
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.cross-env.default">
-            function <span class="apidocSignatureSpan">cross-env.</span>default
-            <span class="apidocSignatureSpan">(args)</span>
-            </a>
-
-        </li>
-
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.cross-env" id="apidoc.module.cross-env">module cross-env</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.cross-env.default" id="apidoc.element.cross-env.default">
-        function <span class="apidocSignatureSpan">cross-env.</span>default
-        <span class="apidocSignatureSpan">(args)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function crossEnv(args) {
-  var _getCommandArgsAndEnv = getCommandArgsAndEnvVars(args),
-      _getCommandArgsAndEnv2 = _slicedToArray(_getCommandArgsAndEnv, 3),
-      command = _getCommandArgsAndEnv2[0],
-      commandArgs = _getCommandArgsAndEnv2[1],
-      env = _getCommandArgsAndEnv2[2];
-
-  if (command) {
-    var proc = (0, _crossSpawn.spawn)(command, commandArgs, { stdio: &#x27;inherit&#x27;, env });
-    process.on(&#x27;SIGTERM&#x27;, function () {
-      return proc.kill(&#x27;SIGTERM&#x27;);
-    });
-    process.on(&#x27;SIGINT&#x27;, function () {
-      return proc.kill(&#x27;SIGINT&#x27;);
-    });
-    process.on(&#x27;SIGBREAK&#x27;, function () {
-      return proc.kill(&#x27;SIGBREAK&#x27;);
-    });
-    process.on(&#x27;SIGHUP&#x27;, function () {
-      return proc.kill(&#x27;SIGHUP&#x27;);
-    });
-    proc.on(&#x27;exit&#x27;, process.exit);
-    return proc;
-  }
-  return null;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
 
 </div>
 
