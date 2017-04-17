@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/kentcdodds/cross-env#readme"
-
-    >cross-env (v4.0.0)</a>
+    <a href="https://github.com/kentcdodds/cross-env#readme">cross-env (v4.0.0)</a>
 </h1>
 <h4>Run scripts that set and use environment variables across platforms</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.cross-env">module cross-env</a><ol>
 
@@ -116,23 +109,23 @@
 
   if (command) {
     var proc = (0, _crossSpawn.spawn)((0, _command2.default)(command), commandArgs.map(_command2.default), {
-      stdio: &#x27;inherit&#x27;,
+      stdio: 'inherit',
       shell: true,
       env: getEnvVars(envSetters)
     });
-    process.on(&#x27;SIGTERM&#x27;, function () {
-      return proc.kill(&#x27;SIGTERM&#x27;);
+    process.on('SIGTERM', function () {
+      return proc.kill('SIGTERM');
     });
-    process.on(&#x27;SIGINT&#x27;, function () {
-      return proc.kill(&#x27;SIGINT&#x27;);
+    process.on('SIGINT', function () {
+      return proc.kill('SIGINT');
     });
-    process.on(&#x27;SIGBREAK&#x27;, function () {
-      return proc.kill(&#x27;SIGBREAK&#x27;);
+    process.on('SIGBREAK', function () {
+      return proc.kill('SIGBREAK');
     });
-    process.on(&#x27;SIGHUP&#x27;, function () {
-      return proc.kill(&#x27;SIGHUP&#x27;);
+    process.on('SIGHUP', function () {
+      return proc.kill('SIGHUP');
     });
-    proc.on(&#x27;exit&#x27;, process.exit);
+    proc.on('exit', process.exit);
     return proc;
   }
   return null;
@@ -182,3 +175,4 @@
     ]
 </div>
 </div>
+</body></html>
