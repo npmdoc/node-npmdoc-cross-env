@@ -61,12 +61,118 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.cross-env">module cross-env</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cross-env.cross-env">
+            function <span class="apidocSignatureSpan"></span>cross-env
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cross-env.toString">
+            function <span class="apidocSignatureSpan">cross-env.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cross-env.toString">module cross-env.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cross-env.toString.toString">
+            function <span class="apidocSignatureSpan">cross-env.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.cross-env" id="apidoc.module.cross-env">module cross-env</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cross-env.cross-env" id="apidoc.element.cross-env.cross-env">
+        function <span class="apidocSignatureSpan"></span>cross-env
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function crossEnv(args) {
+  var _parseCommand = parseCommand(args),
+      _parseCommand2 = _slicedToArray(_parseCommand, 3),
+      envSetters = _parseCommand2[0],
+      command = _parseCommand2[1],
+      commandArgs = _parseCommand2[2];
+
+  if (command) {
+    var proc = (0, _crossSpawn.spawn)((0, _command2.default)(command), commandArgs.map(_command2.default), {
+      stdio: &#x27;inherit&#x27;,
+      shell: true,
+      env: getEnvVars(envSetters)
+    });
+    process.on(&#x27;SIGTERM&#x27;, function () {
+      return proc.kill(&#x27;SIGTERM&#x27;);
+    });
+    process.on(&#x27;SIGINT&#x27;, function () {
+      return proc.kill(&#x27;SIGINT&#x27;);
+    });
+    process.on(&#x27;SIGBREAK&#x27;, function () {
+      return proc.kill(&#x27;SIGBREAK&#x27;);
+    });
+    process.on(&#x27;SIGHUP&#x27;, function () {
+      return proc.kill(&#x27;SIGHUP&#x27;);
+    });
+    proc.on(&#x27;exit&#x27;, process.exit);
+    return proc;
+  }
+  return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cross-env.toString" id="apidoc.element.cross-env.toString">
+        function <span class="apidocSignatureSpan">cross-env.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cross-env.toString" id="apidoc.module.cross-env.toString">module cross-env.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cross-env.toString.toString" id="apidoc.element.cross-env.toString.toString">
+        function <span class="apidocSignatureSpan">cross-env.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 
