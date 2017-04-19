@@ -1,0 +1,125 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/kentcdodds/cross-env#readme"
+
+    >cross-env (v3.2.4)</a>
+</h1>
+<h4>Run scripts that set and use environment variables across platforms</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cross-env">module cross-env</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cross-env.default">
+            function <span class="apidocSignatureSpan">cross-env.</span>default
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cross-env" id="apidoc.module.cross-env">module cross-env</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cross-env.default" id="apidoc.element.cross-env.default">
+        function <span class="apidocSignatureSpan">cross-env.</span>default
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function crossEnv(args) {
+  var _getCommandArgsAndEnv = getCommandArgsAndEnvVars(args),
+      _getCommandArgsAndEnv2 = _slicedToArray(_getCommandArgsAndEnv, 3),
+      command = _getCommandArgsAndEnv2[0],
+      commandArgs = _getCommandArgsAndEnv2[1],
+      env = _getCommandArgsAndEnv2[2];
+
+  if (command) {
+    var proc = (0, _crossSpawn.spawn)(command, commandArgs, { stdio: &#x27;inherit&#x27;, env });
+    process.on(&#x27;SIGTERM&#x27;, function () {
+      return proc.kill(&#x27;SIGTERM&#x27;);
+    });
+    process.on(&#x27;SIGINT&#x27;, function () {
+      return proc.kill(&#x27;SIGINT&#x27;);
+    });
+    process.on(&#x27;SIGBREAK&#x27;, function () {
+      return proc.kill(&#x27;SIGBREAK&#x27;);
+    });
+    process.on(&#x27;SIGHUP&#x27;, function () {
+      return proc.kill(&#x27;SIGHUP&#x27;);
+    });
+    proc.on(&#x27;exit&#x27;, process.exit);
+    return proc;
+  }
+  return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
